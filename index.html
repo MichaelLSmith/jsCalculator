@@ -6,41 +6,40 @@
 
 </head>
 <body>
-    <main class="outline">
-        <!-- <article class="inner"> -->
-            <input type="text" id='screen' class="screen">
-              
-            <div class="keyboard section group">
-                <button value="0" class="col span_1_of_4">0</button>
-                <button value="1" class="col span_1_of_4">1</button>
-                <button value="2" class="col span_1_of_4">2</button>
-                <button value="3" class="col span_1_of_4">3</button>
-                
-            </div>
-            <div class="keyboard section group">
-                <button value="4" class="col span_1_of_4">4</button>
-                <button value="5" class="col span_1_of_4">5</button>
-                <button value="6" class="col span_1_of_4">6</button>
-                <button value="7" class="col span_1_of_4">7</button>      
-            </div>
-            <div class="keyboard section group">
-                <button value="8" class="col span_1_of_4">8</button>
-                <button value="9" class="col span_1_of_4">9</button>
-                <button value="." class="col span_1_of_4">.</button>
-                <button value="-" class="col span_1_of_4">-</button>
-            </div>
-            <div class="keyboard section group">
-                <button value="*" class="col span_1_of_4">*</button>
-                <button value="/" class="col span_1_of_4">/</button>
-                <button value="+" class="col span_1_of_4">+</button>
-            </div>
-            <div id="erase">
-                <button id="backspace"><--</button>
-                <button id="clearNum">CE</button>
-                <button id="clearRunning">AC</button>
-            </div>
-                <button id="equals">=</button>
-        <!-- </article> -->
+    <main class="calculator">
+        <input type="text" id='screen' class="screen">
+
+        <div id="erase" class="keyboard">
+            <span id="backspace"><--</span>
+            <span id="clearNum">CE</span>
+            <span id="clearRunning">AC</span>
+        </div>
+          
+        <div class="keyboard section group">
+            <span id="0" class="col span_1_of_4">0</span>
+            <span id="1" id="1" class="col span_1_of_4">1</span>
+            <span id="2" class="col span_1_of_4">2</span>
+            <span id="3" class="col span_1_of_4">3</span>
+            
+        </div>
+        <div class="keyboard section group">
+            <span id="4" class="col span_1_of_4">4</span>
+            <span id="5" class="col span_1_of_4">5</span>
+            <span id="6" class="col span_1_of_4">6</span>
+            <span id="7" class="col span_1_of_4">7</span>      
+        </div>
+        <div class="keyboard section group">
+            <span id="8" class="col span_1_of_4">8</span>
+            <span id="9" class="col span_1_of_4">9</span>
+            <span id="." class="col span_1_of_4">.</span>
+            <span id="-" class="col span_1_of_4">-</span>
+        </div>
+        <div class="keyboard section group">
+            <span id="*" class="col span_1_of_4">*</span>
+            <span id="/" class="col span_1_of_4">/</span>
+            <span id="+" class="col span_1_of_4">+</span>
+        </div>
+            <span id="equals">=</span>
     </main>
 
 <script src="js/app.js"></script>

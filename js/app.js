@@ -13,12 +13,9 @@ var keyboard = document.getElementsByClassName('keyboard');
     // keyboard.addEventListener("click", inputNum, true);
 
     for(var i = 0; i < keyboard.length; i++){
-        console.log(keyboard[i]);
+        console.dir(keyboard[i]);
         keyboard[i].addEventListener('click', inputNum,true);
     }
-
-
-    
 
 //this fuction concatinates the numbers as they are entered.
 function inputNum(evt){
@@ -26,8 +23,9 @@ function inputNum(evt){
     console.log('inputNum()');
     //have one event on the parent that listens to all the children. The if statement stops the even firing if the parent element is clicked. 
     //From: https://www.kirupa.com/html5/handling_events_for_many_elements.htm
+    console.log(event.target.id);
     if(evt.target !== evt.currentTarget){
-    num += evt.target.value;
+    num += evt.target.id;
     console.log('num in inputNum(): '+num);
 
     output.value = num;
