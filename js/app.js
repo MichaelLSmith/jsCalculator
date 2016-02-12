@@ -5,12 +5,12 @@ var runningTotalStr = '';
 
 //print to screen
 output = document.querySelector('#screen');
-// console.log('output');
-// console.dir(output);
 
 //variable to add an event listener to each number button
-var numEvent = document.getElementsByClassName('numEvent');
-    // keyboard.addEventListener("click", inputNum, true);
+//have to use unicode because numbers and symbol are not viable css properties.
+//nums start at unicode 30
+//symbols: * = 2A; + = 2B; - = 2C; . = 2E; / = 2F; 
+var numEvent = document.querySelectorAll('span#\\30 , span#\\31 , span#\\32 ,span#\\33, span#\\34 ,span#\\35 ,span#\\36 ,span#\\37 ,span#\\38 ,span#\\39 ,span#\\2A , span#\\2B , span#\\2C , span#\\2E , span#\\2F');
 
     for(var i = 0; i < numEvent.length; i++){
         // console.dir(numEvent[i]);
@@ -24,14 +24,10 @@ function inputNum(evt){
     //have one event on the parent that listens to all the children. The if statement stops the even firing if the parent element is clicked. 
     //From: https://www.kirupa.com/html5/handling_events_for_many_elements.htm
     console.log(event.target.id);
-    if(evt.target !== evt.currentTarget){
     num += evt.target.id;
     console.log('num in inputNum(): '+num);
 
     output.value = num;
-  }
-  //method to stop the event firing once it reaches the parent element
-  evt.stopPropagation();
 }
 
 equals = document.querySelector('#equals');
@@ -58,8 +54,6 @@ function compute(evt){
     console.log('runningTotalStr: '+runningTotalStr);
 }
 
-// erase = document.querySelector('#erase').addEventListener('click', eraseFun, false);
-
 erase = document.querySelectorAll('span#backspace, span#clearNum, span#clearRunning');
 
     for(var e = 0; e < erase.length; e++){
@@ -78,29 +72,24 @@ function eraseFun(evt){
     console.dir(evt.target);
     console.dir(evt.currentTarget);
 
-    if(evt.target !== evt.currentTarget){
-        console.log('eraseFun() first if');
-        // The <-- button clears the last number in the string.
-        if(evt.target.id === 'backspace'){ 
-            console.log('backspaceFun');
-            num = num.substring(0, num.length -1);
-            console.log('num in backspaceFun: '+num);
-            output.value = num;
-        }
-        // The CE button clears the entire string
-        if(evt.target.id === 'clearNum'){
-            console.log('clearNum');
-            num = '';
-            output.value = runningTotalInt;
-            console.log('num in clearnum: '+num);
-        }
-        // The CA Button clears the running total var
-        if(evt.target.id === 'clearRunning'){
-            console.log('clearRunning');
-            runningTotalInt = 0;
-            runningTotalStr = '';
-            output.value = '';
-        }
+    if(evt.target.id === 'backspace'){ 
+        console.log('backspaceFun');
+        num = num.substring(0, num.length -1);
+        console.log('num in backspaceFun: '+num);
+        output.value = num;
     }
-    evt.stopPropagation();    
+    // The CE button clears the entire string
+    if(evt.target.id === 'clearNum'){
+        console.log('clearNum');
+        num = '';
+        output.value = runningTotalInt;
+        console.log('num in clearnum: '+num);
+    }
+    // The CA Button clears the running total var
+    if(evt.target.id === 'clearRunning'){
+        console.log('clearRunning');
+        runningTotalInt = 0;
+        runningTotalStr = '';
+        output.value = '';
+    }  
 }
