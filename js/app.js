@@ -5,16 +5,16 @@ var runningTotalStr = '';
 
 //print to screen
 output = document.querySelector('#screen');
-console.log('output');
-console.dir(output);
+// console.log('output');
+// console.dir(output);
 
 //variable to add an event listener to each number button
-var keyboard = document.getElementsByClassName('keyboard');
+var numEvent = document.getElementsByClassName('numEvent');
     // keyboard.addEventListener("click", inputNum, true);
 
-    for(var i = 0; i < keyboard.length; i++){
-        console.dir(keyboard[i]);
-        keyboard[i].addEventListener('click', inputNum,true);
+    for(var i = 0; i < numEvent.length; i++){
+        // console.dir(numEvent[i]);
+        numEvent[i].addEventListener('click', inputNum,true);
     }
 
 //this fuction concatinates the numbers as they are entered.
@@ -36,7 +36,7 @@ function inputNum(evt){
 
 equals = document.querySelector('#equals');
 equals.addEventListener('click', compute, false);
-console.log(equals);
+// console.log(equals);
 
 function compute(evt){
     console.dir(evt);
@@ -58,12 +58,28 @@ function compute(evt){
     console.log('runningTotalStr: '+runningTotalStr);
 }
 
-erase = document.querySelector('#erase').addEventListener('click', eraseFun, false);
+// erase = document.querySelector('#erase').addEventListener('click', eraseFun, false);
+
+erase = document.querySelectorAll('span#backspace, span#clearNum, span#clearRunning');
+
+    for(var e = 0; e < erase.length; e++){
+        console.dir(erase[e]);
+        erase[e].addEventListener('click', eraseFun, false);
+    }
+console.dir(erase);
 
 //function to operate all the delete buttons
 function eraseFun(evt){
+    console.log('eraseFun()');
+    console.dir(evt);
     console.dir(evt.target.id);
+
+    console.log('evt.target');
+    console.dir(evt.target);
+    console.dir(evt.currentTarget);
+
     if(evt.target !== evt.currentTarget){
+        console.log('eraseFun() first if');
         // The <-- button clears the last number in the string.
         if(evt.target.id === 'backspace'){ 
             console.log('backspaceFun');
