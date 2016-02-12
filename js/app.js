@@ -9,13 +9,15 @@ output = document.querySelector('#screen');
 //variable to add an event listener to each number button
 //have to use unicode because numbers and symbol are not viable css properties.
 //nums start at unicode 30
-//symbols: * = 2A; + = 2B; - = 2C; . = 2E; / = 2F; 
-var numEvent = document.querySelectorAll('span#\\30 , span#\\31 , span#\\32 ,span#\\33, span#\\34 ,span#\\35 ,span#\\36 ,span#\\37 ,span#\\38 ,span#\\39 ,span#\\2A , span#\\2B , span#\\2C , span#\\2E , span#\\2F');
+//symbols: * = 2A; + = 2B; - = 2D; . = 2E; / = 2F; 
+var numEvent = document.querySelectorAll('span#\\30 , span#\\31 , span#\\32 ,span#\\33, span#\\34 ,span#\\35 ,span#\\36 ,span#\\37 ,span#\\38 ,span#\\39 ,span#\\2A , span#\\2B , span#\\2D , span#\\2E , span#\\2F');
 
     for(var i = 0; i < numEvent.length; i++){
         // console.dir(numEvent[i]);
         numEvent[i].addEventListener('click', inputNum,true);
     }
+
+console.dir(numEvent);
 
 //this fuction concatinates the numbers as they are entered.
 function inputNum(evt){

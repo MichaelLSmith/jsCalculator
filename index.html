@@ -3,43 +3,48 @@
 <head>
     <title>Calculator</title>
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
 <body>
     <main class="calculator">
         <input type="text" id='screen' class="screen">
 
-        <div id="erase" class="keyboard">
-            <span id="backspace"><--</span>
-            <span id="clearNum">CE</span>
-            <span id="clearRunning">AC</span>
+        <div class="keyboard section group">
+            <span id="clearRunning" class="col span_1_of_4">AC</span>
+            <span id="/" class="col span_1_of_4">/</span>
+            <span id="*" class="col span_1_of_4">*</span>
+            <span id="backspace" class="col span_1_of_4">
+                <i class="fa fa-chevron-left"></i>
+            </span>
         </div>
           
-        <div class="keyboard numEvent section group">
-            <span id="0" class="col span_1_of_4">0</span>
-            <span id="1" id="1" class="col span_1_of_4">1</span>
-            <span id="2" class="col span_1_of_4">2</span>
-            <span id="3" class="col span_1_of_4">3</span>
-            
+        <div class="keyboard section group">
+            <span id="7" class="col span_1_of_4">7</span>      
+            <span id="8" class="col span_1_of_4">8</span>
+            <span id="9" class="col span_1_of_4">9</span>
+            <span id="clearNum" class="col span_1_of_4">CE</span>
         </div>
-        <div class="keyboard numEvent section group">
+
+        <div class="keyboard section group">
             <span id="4" class="col span_1_of_4">4</span>
             <span id="5" class="col span_1_of_4">5</span>
             <span id="6" class="col span_1_of_4">6</span>
-            <span id="7" class="col span_1_of_4">7</span>      
-        </div>
-        <div class="keyboard numEvent section group">
-            <span id="8" class="col span_1_of_4">8</span>
-            <span id="9" class="col span_1_of_4">9</span>
-            <span id="." class="col span_1_of_4">.</span>
-            <span id="-" class="col span_1_of_4">-</span>
-        </div>
-        <div class="keyboard numEvent section group">
-            <span id="*" class="col span_1_of_4">*</span>
-            <span id="/" class="col span_1_of_4">/</span>
             <span id="+" class="col span_1_of_4">+</span>
         </div>
-            <span id="equals">=</span>
+
+        <div class="keyboard section group">
+            <span id="1" id="1" class="col span_1_of_4">1</span>
+            <span id="2" class="col span_1_of_4">2</span>
+            <span id="3" class="col span_1_of_4">3</span>
+            <span id="-" class="col span_1_of_4">-</span>
+        </div>
+        
+        <div class="keyboard section group">
+            <span id="0" class="col span_1_of_4">0</span>
+            <span id="." class="col span_1_of_4">.</span>
+            <span id="equals" class="col span_2_of_4">=</span>
+        </div>
     </main>
 
 <script src="js/app.js"></script>
