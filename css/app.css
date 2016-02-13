@@ -54,11 +54,25 @@
   padding: 10px;
   margin: 0 auto 0 auto;
   background: black;
-  /*@include borderRadius(15px, 45px);*/
   border: solid black 15px;
   -webkit-border-radius: 45px;
   -moz-border-radius: 45px;
-  border-radius: 45px; }
+  border-radius: 45px;
+  /*    border: solid black 15px;
+      -webkit-border-radius: 45px;
+      -moz-border-radius: 45px;
+      border-radius: 45px;*/ }
+  .calculator span {
+    background-color: white;
+    cursor: pointer;
+    text-align: center;
+    border: solid black 1px;
+    box-sizing: border-box;
+    line-height: 1.8em;
+    border: solid black 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
 
 #screen {
   width: 100%;
@@ -69,17 +83,10 @@
   display: block;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
-  border-radius: 25px; }
+  border-radius: 25px;
+  box-sizing: border-box; }
 
 .keyboard {
-  width: 75%;
   margin: auto; }
-
-span {
-  background-color: white;
-  cursor: pointer;
-  text-align: center;
-  border: solid black 1px;
-  box-sizing: border-box; }
 
 /*# sourceMappingURL=app.css.map */
