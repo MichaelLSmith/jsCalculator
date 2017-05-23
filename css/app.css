@@ -46,30 +46,26 @@
     margin: 1% 0 1% 0%; }
 
   .span_1_of_4, .span_2_of_4, .span_3_of_4, .span_4_of_4 {
-    width: 100%; } }
+    /*width: 100%; */ } }
 /*! app css begin*/
 .calculator {
   height: 250px;
   width: 200px;
   padding: 10px;
   margin: 0 auto 0 auto;
-  background: black;
-  border: solid black 15px;
+  background: #333333;
+  border: solid #333333 15px;
   -webkit-border-radius: 45px;
   -moz-border-radius: 45px;
-  border-radius: 45px;
-  /*    border: solid black 15px;
-      -webkit-border-radius: 45px;
-      -moz-border-radius: 45px;
-      border-radius: 45px;*/ }
+  border-radius: 45px; }
   .calculator span {
     background-color: white;
     cursor: pointer;
     text-align: center;
-    border: solid black 1px;
+    border: solid #333333 1px;
     box-sizing: border-box;
     line-height: 1.8em;
-    border: solid black 1px;
+    border: solid #333333 1px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px; }
@@ -79,7 +75,7 @@
   margin: 0 auto 1.6em auto;
   text-align: right;
   font-size: 1.4em;
-  border: solid black 1px;
+  border: solid #333333 1px;
   display: block;
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
